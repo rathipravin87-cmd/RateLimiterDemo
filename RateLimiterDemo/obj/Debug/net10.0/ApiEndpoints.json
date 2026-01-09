@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "RateLimiterDemo.Controller.DataController",
+    "Method": "GetData",
+    "RelativePath": "Data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

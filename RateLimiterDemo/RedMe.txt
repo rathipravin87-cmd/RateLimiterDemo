@@ -1,0 +1,18 @@
+Why It’s Fixed Window
+- Window defined: Requests are counted in a fixed time slice (e.g., 10 seconds).
+- Counter reset: At the end of the window, the counter resets to zero.
+- Behavior:
+- First 5 requests in the window → allowed.
+- 6th request (within the same 10s) →  rejected (HTTP 429).
+- At 10s mark → counter resets, new requests allowed again.
+
+ Characteristics
+- Simple & fast to implement.
+- Edge burst problem: If a client sends 5 requests at the end of one window and 5 at the start of the next, they effectively send 10 requests almost instantly.
+- Best for: APIs where simplicity matters more than perfectly smooth traffic.
+
+ Alternatives in .NET Core
+ASP.NET Core’s Rate Limiting middleware also supports:
+- Sliding Window → smoother distribution, avoids burstiness.
+- Token Bucket → allows bursts but enforces average rate.
+- Concurrency Limiter → limits simultaneous requests instead of time‑based.

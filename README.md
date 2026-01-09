@@ -1,3 +1,5 @@
+**Note: If you want to run this please use visual studio 2026**
+
 Project Overview : Many services need to control the rate of traffic they receive to prevent abuse and ensure 
 availability for all users. Your task is to design and build a simplified, in-memory rate-limiting 
 service. 
